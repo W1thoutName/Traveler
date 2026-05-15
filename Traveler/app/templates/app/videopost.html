@@ -1,0 +1,33 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<div>
+    <div>
+        <h3>Видео 1</h3>
+        <video width="100%" controls>
+            <source src="/media/video1.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <p>
+            <a href="https://dareful.com/island-coast-ocean/" target="_blank" rel="noopener noreferrer">
+                Video</a> courtesy of <a href="https://dareful.com" target="_blank" rel="noopener noreferrer">Dareful</a>
+        </p>
+    <div>
+        <h3>Видео 2</h3>
+        <video width="100%" controls>
+            <source src="/media/video2.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <p>
+            <a href="https://dareful.com/winter-mountain-aerial/" target="_blank" rel="noopener noreferrer">Video</a>
+            courtesy of <a href="https://dareful.com" target="_blank" rel="noopener noreferrer">Dareful</a>
+        </p>
+    </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "app/layout.html" %}
+
+{% load static %}
+{% block content %}
+
+<br>
+<h2>Полезные ресурсы о путешествиях</h2>
+<br />
+
+<div>
+
+    <p>
+        <a href="https://www.aviasales.ru" target="_blank">
+            <img src="{% static 'app/content/aviasales.png' %}" alt="Aviasales" style="height: 40px; margin-right: 10px;" />
+        </a>
+        <span><strong>Aviasales</strong> — поиск дешёвых авиабилетов по всем направлениям.</span>
+    </p>
+
+    <p>
+        <a href="https://www.booking.com" target="_blank">
+            <img src="{% static 'app/content/booking.png' %}" alt="Booking" style="height: 40px; margin-right: 10px;" />
+        </a>
+        <span> — бронирование отелей, апартаментов и хостелов по всему миру.</span>
+    </p>
+
+    <p>
+        <a href="https://www.skyscanner.ru" target="_blank">
+            <img src="{% static 'app/content/skyscanner.png' %}" alt="Skyscanner" style="height: 40px; margin-right: 10px;" />
+        </a>
+        <span><strong>Skyscanner</strong> — сравнение цен на авиабилеты, отели и прокат автомобилей.</span>
+    </p>
+
+</div>
+
+{% endblock %}

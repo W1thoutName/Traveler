@@ -1,0 +1,67 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% if form != None %}
+<br>
+<h2>Отправьте, пожалуйста, заполненную анкету</h2>
+<div>
+    <form method="post">
+        {% csrf_token %}
+
+        <p>{{ form.name.label }}:<br>{{ form.name }}</p>
+        <p>{{ form.city.label }}:<br>{{ form.city }}</p>
+        <p>{{ form.email.label }}:<br>{{ form.email }}</p>
+        <p>{{ form.rating.label }}:<br>{{ form.rating }}</p>
+        <p>{{ form.travel_frequency.label }}:<br>{{ form.travel_frequency }}</p>
+        <p>{{ form.favorite_destinations.label }}:<br>{{ form.favorite_destinations }}</p>
+        <p>{{ form.budget.label }}:<br>{{ form.budget }}</p>
+        <p>{{ form.notice }} {{ form.notice.label }}</p>
+        <p>{{ form.message.label }}:<br>{{ form.message }}</p>
+
+        <p><input type="submit" value="Отправить" id="submit_btn"></p>
+    </form>
+</div>
+{% else %}
+<br>
+<h2>Благодарим за предоставленную информацию!</h2>
+<h3>Вы сообщили о себе следующее:</h3>
+<ul>
+    <li>Имя: {{ data.name }}</li>
+    <li>Город: {{ data.city }}</li>
+    <li>E-mail: {{ data.email }}</li>
+    <li>Оценка сайта: {{ data.rating }}</li>
+    <li>Частота путешествий: {{ data.travel_frequency }}</li>
+    <li>Любимые направления: {{ data.favorite_destinations }}</li>
+    <li>Бюджет: {{ data.budget }}</li>
+    <li>Подписка: {{ data.notice }}</li>
+    <li>Пожелания: {{ data.message }}</li>
+</ul>
+{% endif %}
+
+<script>
+    function button_mouseover() {
+        $('#submit_btn').css('color', 'green');
+    }
+
+    function button_mouseout() {
+        $('#submit_btn').css('color', 'black');
+    }
+
+    function field_focus() {
+        $(this).css('background-color', '#eaffea');
+    }
+
+    function field_blur() {
+        $(this).css('background-color', 'white');
+    }
+
+    $('#submit_btn').mouseover(button_mouseover);
+    $('#submit_btn').mouseout(button_mouseout);
+
+    $('input[type="text"], input[type="email"], textarea')
+        .focus(field_focus)
+        .blur(field_blur);
+</script>
+
+{% endblock %}

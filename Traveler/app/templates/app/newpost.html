@@ -1,0 +1,35 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>Добавить новую статью в блог</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div>
+        {{ form.title.label_tag }}<br>
+        {{ form.title }}
+    </div>
+
+    <div>
+        {{ form.description.label_tag }}<br>
+        {{ form.description }}
+    </div>
+
+    <div>
+        {{ form.content.label_tag }}<br>
+        {{ form.content }}
+    </div>
+
+    <div>
+        {{ form.image.label_tag }}<br>
+        {{ form.image }}
+    </div>
+
+    <br>
+    <button type="submit">Сохранить статью</button>
+    <a href="{% url 'blog' %}">Отмена</a>
+</form>
+
+{% endblock %}

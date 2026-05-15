@@ -1,0 +1,99 @@
+{% extends "app/layout.html" %}
+{% load static %}
+{% block content %}
+
+<!-- СЛАЙДЕР-КАРУСЕЛЬ -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+    <!-- Индикаторы (точечки внизу, показывают текущий слайд) -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Контейнер со слайдами -->
+    <div class="carousel-inner" role="listbox">
+
+        <!-- Первый слайд (активный) -->
+        <div class="item active">
+            <img src="{% static 'app/content/banner1.jpg' %}" alt="Путешествия по горам" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Откройте для себя красоту отдыха на открытом воздухе
+                    <a class="btn btn-default" href="{% url 'blog' %}">Читать далее</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Второй слайд -->
+        <div class="item">
+            <img src="{% static 'app/content/banner2.jpg' %}" alt="Морские путешествия" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Одых на горных вершинах
+                    <a class="btn btn-default" href="{% url 'blog' %}">Читать далее</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Третий слайд -->
+        <div class="item">
+            <img src="{% static 'app/content/banner3.jpg' %}" alt="Городские достопримечательности" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Прогулки в лесу
+                    <a class="btn btn-default" href="{% url 'blog' %}">Читать далее</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Стрелки навигации (влево/вправо) -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+</div>
+<!-- КОНЕЦ СЛАЙДЕРА -->
+
+<div class="jumbotron">
+    <h1>Мир путешествий</h1>
+    <p class="lead">Путешествуй вместе с нами по миру</p>
+    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Узнать больше &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Маршруты</h2>
+        <p>
+            Лучшие маршруты для самостоятельных путешественников: Европа, Азия, Америка.
+            Готовые гайды и советы от местных жителей.
+        </p>
+        <p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Узнать больше &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Лайфхаки</h2>
+        <p>
+            Как сэкономить на билетах, собрать идеальный чемодан и не попасть
+            в туристические ловушки.
+        </p>
+        <p><a class="btn btn-default" href="https://pypi.org/">Узнать больше &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Фотоотчеты</h2>
+        <p>
+            Вдохновляющие фотографии и дневники из последних экспедиций
+            нашей команды.
+        </p>
+        <p><a class="btn btn-default" href="http://azure.microsoft.com">Узнать больше &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

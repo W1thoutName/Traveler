@@ -1,0 +1,307 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar-brand .navbar-logo {
+    height: 25px; 
+    width: auto;
+}
+
+/* ===== Стили для страницы блога (список статей) ===== */
+
+/* Общий контейнер для каждой статьи в списке */
+.blog-post {
+    margin-bottom: 30px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.blog-post:hover {
+    background-color: #f9f9f9;
+    padding-left: 20px;
+}
+
+/* Заголовок статьи в списке */
+.title {
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+.blog-post h2 {
+    color: #3474a7;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Дата публикации */
+.post-date {
+    color: #888;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+
+.post-avtor {
+    color: #888;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+/* Краткое содержание */
+.post-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* Кнопка "Читать далее" */
+.read-more {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #3474a7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+}
+
+/* ===== Стили для страницы отдельной статьи (blogpost.html) ===== */
+
+/* Ссылка "Назад" */
+.back-link, .back-link-bottom {
+    display: inline-block;
+    margin: 10px 0 20px 0;
+    padding: 5px 12px;
+    background-color: #f0f0f0;
+    color: #3474a7;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover, .back-link-bottom:hover {
+    background-color: #3474a7;
+    color: #f0f0f0;
+    text-decoration: none;
+}
+
+/* Дата и автор на странице статьи */
+.post-full-date, .post-author {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Полное содержание статьи */
+.post-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin: 20px 0;
+}
+
+.post-content p {
+    margin-bottom: 20px;
+}
+
+/* Разделительная линия */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #3474a7, #ffd343, #3474a7);
+    margin: 15 px 0;
+}
+
+/* Стили для комментариев */
+/* Поле ввода комментария */
+.comment-field {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении */
+.comment-field:hover {
+    border-color: #3474a7;
+    background-color: #fff;
+}
+
+/* Эффект при фокусе (когда кликнули внутрь) */
+.comment-field:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.3);
+    background-color: white;
+}
+
+.comment {
+    background-color: #f8f9fa;
+    border-left: 4px solid #3474a7;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #3474a7;
+}
+
+.comment-date {
+    color: #888;
+}
+
+.comment-text {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Форма добавления комментария */
+.comment-form {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.btn-comment {
+    background-color: #3474a7;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-comment:hover {
+    background-color: #28a745;
+}
+
+.login-message {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Стили для слайдера-карусели */
+#myCarousel {
+    margin-top: 70px;
+    margin-bottom: 20px;
+}
+
+#myCarousel .item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 10px;
+    bottom: 60px;
+}
+
+.carousel-caption p {
+    color: white;
+    font-size: 16px;
+}
+
+.carousel-caption .btn {
+    background-color: #ffffff;
+    color:  #28a745;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.carousel-control {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.carousel-control:focus,
+.carousel-control:active,
+.carousel-control:visited {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.post-image img {
+
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
