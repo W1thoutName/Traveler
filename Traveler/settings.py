@@ -1,5 +1,5 @@
 """
-Django settings for T4 project.
+Django settings for  project.
 
 Based on 'django-admin startproject' using Django 2.1.2.
 
@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'T4.urls'
+ROOT_URLCONF = 'Traveler.urls'
 
 # Template configuration
 # https://docs.djangoproject.com/en/2.1/topics/templates/
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'T4.wsgi.application'
+WSGI_APPLICATION = 'Traveler.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 DATABASES = {
