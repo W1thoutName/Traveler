@@ -2,8 +2,8 @@
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <Name>T4</Name>
-    <RootNamespace>T4</RootNamespace>
+    <Name>Traveler</Name>
+    <RootNamespace>Traveler</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
@@ -18,7 +18,7 @@
     <WorkingDirectory>.</WorkingDirectory>
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <LaunchProvider>Django launcher</LaunchProvider>
-    <DjangoSettingsModule>T4.settings</DjangoSettingsModule>
+    <DjangoSettingsModule>Traveler.settings</DjangoSettingsModule>
     <OutputPath>.</OutputPath>
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
   </PropertyGroup>
@@ -38,10 +38,10 @@
     <Compile Include="app\__init__.py" />
     <Compile Include="app\migrations\__init__.py" />
     <Compile Include="manage.py" />
-    <Compile Include="T4\__init__.py" />
-    <Compile Include="T4\settings.py" />
-    <Compile Include="T4\urls.py" />
-    <Compile Include="T4\wsgi.py" />
+    <Compile Include="Traveler\__init__.py" />
+    <Compile Include="Traveler\settings.py" />
+    <Compile Include="Traveler\urls.py" />
+    <Compile Include="Traveler\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
@@ -53,7 +53,7 @@
     <Folder Include="app\static\app\scripts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
-    <Folder Include="T4\" />
+    <Folder Include="Traveler\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\static\app\content\aviasales.png" />

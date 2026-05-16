@@ -1,5 +1,5 @@
 """
-Definition of urls for T4.
+Definition of urls for Traveler.
 """
 
 from datetime import datetime
